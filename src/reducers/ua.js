@@ -12,6 +12,13 @@ const ua = (state = INITIAL_STATE, action) => {
       error: false
     };
   }
+  if (action.type === 'LOAD_DATA_UA_SUCCESS') {
+    return {
+      isFetching: false,
+      data: action.data,
+      error: false
+    };
+  }
   return state;
 };
 
